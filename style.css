@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+  }
+
 html,
 body {
   width: 100%;
@@ -91,7 +96,7 @@ body {
   text-align: center;
   max-height: 15.8vw;
   font-size: 15.8vw;
-  font-family: futura;
+  font-family: Futura;
   line-height: 14vw;
   letter-spacing: -10px;
 }
@@ -114,7 +119,7 @@ body {
   opacity: 0;
   scale: 0;
   color: white;
-  font-family: futura;
+  font-family: Futura;
   position: fixed;
   border-radius: 50%;
 }

@@ -90,12 +90,13 @@ body {
   width: 100%;
   padding: 0 1vw;
   padding-top: 17vh;
+  margin-top: 8.5vw;
 }
 
 #page1 h1 {
   text-align: center;
   max-height: 15.8vw;
-  font-size: 15.8vw;
+  font-size: 16.2vw;
   font-family: Futura;
   line-height: 14vw;
   letter-spacing: -10px;
@@ -122,6 +123,32 @@ body {
   font-family: Futura;
   position: fixed;
   border-radius: 50%;
+}
+
+.separator{
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 5vw;
+  width: 100%;
+  margin-bottom: -2vw;
+}
+.separator h5{
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.separator .text1{
+  margin: 0 2vw;
+  text-align: left;
+}
+.separator .text2{
+  width: 88.5%;
+  text-align: right;
+}
+.separator .line{
+  width: 96%;
+  margin: auto;
+  border-bottom: 1px solid black;
 }
 
 #page2 {
@@ -151,16 +178,81 @@ body {
   scale: 1.1;
 }
 #page2 .elem .box {
-  height: 60px;
-  width: 80%;
+  text-transform: uppercase;
+  overflow: hidden;
+  height: 8vh;
+  width: 70%;
   position: absolute;
-  z-index: 9;
-  background-color: #f5dfcf;
+  top: 45%;
   border-radius: 30px;
-  transition: all 0.3s ease;
+  transition: height 0.3s ease;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #555555;
 }
+.image-nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position:absolute;
+  top: 30%;
+}
+.bold{
+  font-weight: bolder;
+  color: #363636;
+}
+.image-nav i{
+  font-size: 1.2rem;
+}
+
+#page2 .elem .box .dot{
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+.image-content{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  display: none;
+  transition: all 0.1s;
+}
+.image-content .prod{
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vw;
+}
+.image-content .prod img{
+  height: 100px;
+}
+
 #page2 .elem .box:hover {
-  height: 300px;
+  height: 250px;
+}
+
+#page2 .elem .box:hover .image-content{
+  display: flex;
+}
+#page2 .elem .box:hover .image-nav{
+  top: 6%;
+}
+#page2 #elem1 .box, #page2 #elem3 .box{
+  background-color: #e5f0d6;
+}
+#page2 #elem2 .box{
+  background-color: #f5dfcf;
 }
 #page3 {
   min-height: 120vh;
@@ -184,6 +276,57 @@ body {
   margin-bottom: 2vh;
   padding: 5vh;
 }
+#page3 .page3-text{
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+}
+
+#page3 .page3-text h3{
+  font-size: 3rem;
+  font-family: futura;
+  line-height: 3.4vw;
+  padding: 2vw;
+}
+
+#page3 .page3-text .page3-para{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  padding: 2vw;
+} 
+
+#page3 .page3-text .page3-para p{
+  margin: 1vw 5vw;
+  color: black;
+} 
+#page3 .page3-text .page3-para span{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: relative;
+  margin: 1vw 4.7vw;
+  color: #363636;
+  padding: 0.3vw;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#page3 .page3-text .page3-para span::after{
+  content: "";
+  width: 0%;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  transition: width 0.2s;
+}
+#page3 .page3-text .page3-para span:hover::after{
+  width: 100%;
+}
+
 #page3 .product h6 {
   margin-top: 1vh;
   font-size: 0.8vw;

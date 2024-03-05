@@ -145,7 +145,7 @@ body {
   width: 88.5%;
   text-align: right;
 }
-.separator .line{
+.separator .lineh{
   width: 96%;
   margin: auto;
   border-bottom: 1px solid black;
@@ -471,5 +471,100 @@ body {
   }
   #page2 .elem img {
     padding: 4vh 0;
+  }
+}
+
+/* blur div and horizontal scroll */
+.bgele{
+  z-index: -100000000000;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background: #d51010;
+  border-radius: 10% 10% 60% 50%;
+  animation: move 20s  infinite ease-in-out;
+  background: rgb(224,77,43);
+/* background: radial-gradient(circle, rgb(237, 43, 0) 0%, rgb(248, 156, 52) 100%); */
+background: rgb(224,43,43);
+background: rgb(230,17,17);
+background: linear-gradient(48deg, rgba(230,17,17,1) 0%, rgba(255,0,77,1) 50%, rgba(252,176,69,1) 100%);border: none;
+  box-shadow: inset 0px 0px 20px 20px #ffffff;
+  filter: blur(40px);
+}
+@keyframes move {
+  0%{
+      top: -25%;
+      left: 40%;
+      border-radius: 60% 50%;
+  }
+  50%{
+      top: -20%;
+      left: 35%;
+      border-radius: 50% 60%;
+  }
+  100%{
+      top: -25%;
+      left: 40%;
+
+      border-radius: 60% 50%;
+  }
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.horizontalScroll{
+  font-family: "Futura", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 5rem 0;
+}
+.line{
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+
+  background-color: #6c6c6c54;
+
+}
+
+.horizontalList{
+  display: flex;
+  left: 100%;
+  width: 200%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: infiniteScroll 15s linear infinite ;
+}
+.horizontalList2{
+  display: flex;
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: infiniteScroll 15s linear infinite ;
+
+
+  animation-delay: 10s;
+}
+li{
+  list-style: none;
+  margin-left: 1rem;
+  font-size: 75px;
+  /* font-weight: 100; */
+}
+@keyframes infiniteScroll{
+  0%{
+    left: 100%;
+
+  }
+  100%{
+    left: -100%;
   }
 }

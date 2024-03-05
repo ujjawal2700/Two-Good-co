@@ -5,9 +5,9 @@
 }
 
 @font-face {
-    font-family: Futura;
-    src: url(./Futura-Bold.ttf);
-  }
+  font-family: Futura;
+  src: url(./Futura-Bold.ttf);
+}
 
 html,
 body {
@@ -22,67 +22,88 @@ body {
   color: white;
 }
 
-#nav{
-    width: 100%;
-    font-size: 0.9vw;
-    position: fixed;
-    padding: 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    z-index: 99;
+#nav {
+  width: 100%;
+  font-size: 0.9vw;
+  position: fixed;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 99;
 }
 
 #nav-part1 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 82px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 82px;
 }
-#nav-part1 svg{
-    min-height: 82px;
-    display: block;
-}
-
-#navbar-2{
-    width: 40%;
-    display: flex;
-    align-items:flex-start;
-    justify-content:space-around;
-    font-size: 0.9vw;
+#nav-part1 svg {
+  min-height: 82px;
+  display: block;
 }
 
-#navbar-2 #nav-2{
-    padding: 10px 0;
+#navbar-2 {
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-size: 0.9vw;
 }
 
-#navbar-2 a{
-    text-decoration: none;
-    color: black;
-    margin: 0 30px;
-    padding: 10px 0;
+#navbar-2 #nav-2 {
+  padding: 10px 0;
 }
 
-#navbar-2 #icons{
-    background-color: #f7f7f7;
-    padding: 7px 0;
-    border-radius: 50px;
-    margin: 0 10px;
-}
-#navbar-2 #icons i{
-    cursor: pointer;
-    font-size: 1.5vw;
-    margin: 0 25px;
-    font-weight: 100;
+#navbar-2 a {
+  text-decoration: none;
+  color: black;
+  margin: 0 30px;
+  padding: 10px 0;
+
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-#curser{
-    height: 200px;
-    width: 200px;
-    background-color: blanchedalmond;
-    border-radius: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%) scale(0);
+#navbar-2 a::after {
+  content: "";
+  width: 0%;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  transition: width 0.2s;
+}
+#navbar-2 a:hover::after {
+  width: 100%;
+}
+
+#navbar-2 #icons {
+  background-color: #f7f7f7;
+  padding: 7px 0;
+  border-radius: 50px;
+  margin: 0 10px;
+}
+#navbar-2 #icons i {
+  cursor: pointer;
+  font-size: 1.5vw;
+  margin: 0 25px;
+  font-weight: 100;
+}
+
+#curser {
+  height: 200px;
+  width: 200px;
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
 }
 #page1 {
   position: relative;
@@ -125,27 +146,27 @@ body {
   border-radius: 50%;
 }
 
-.separator{
-  font-family: 'Montserrat', sans-serif;
+.separator {
+  font-family: "Montserrat", sans-serif;
   margin-top: 5vw;
   width: 100%;
   margin-bottom: -2vw;
 }
-.separator h5{
+.separator h5 {
   font-size: 0.8rem;
   font-weight: 200;
   text-transform: uppercase;
   display: inline-block;
 }
-.separator .text1{
+.separator .text1 {
   margin: 0 2vw;
   text-align: left;
 }
-.separator .text2{
+.separator .text2 {
   width: 88.5%;
   text-align: right;
 }
-.separator .lineh{
+.separator .lineh {
   width: 96%;
   margin: auto;
   border-bottom: 1px solid black;
@@ -187,36 +208,36 @@ body {
   border-radius: 30px;
   transition: height 0.3s ease;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   color: #555555;
 }
-.image-nav{
+.image-nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position:absolute;
+  position: absolute;
   top: 30%;
 }
-.bold{
+.bold {
   font-weight: bolder;
   color: #363636;
 }
-.image-nav i{
+.image-nav i {
   font-size: 1.2rem;
 }
 
-#page2 .elem .box .dot{
+#page2 .elem .box .dot {
   height: 10px;
   width: 10px;
   background-color: black;
   border-radius: 50%;
 }
-.image-content{
+.image-content {
   position: relative;
   display: flex;
   align-items: center;
@@ -224,7 +245,7 @@ body {
   display: none;
   transition: all 0.1s;
 }
-.image-content .prod{
+.image-content .prod {
   cursor: pointer;
   text-align: center;
   margin: auto;
@@ -234,7 +255,7 @@ body {
   flex-direction: column;
   padding: 1vw;
 }
-.image-content .prod img{
+.image-content .prod img {
   height: 100px;
 }
 
@@ -242,16 +263,17 @@ body {
   height: 250px;
 }
 
-#page2 .elem .box:hover .image-content{
+#page2 .elem .box:hover .image-content {
   display: flex;
 }
-#page2 .elem .box:hover .image-nav{
+#page2 .elem .box:hover .image-nav {
   top: 6%;
 }
-#page2 #elem1 .box, #page2 #elem3 .box{
+#page2 #elem1 .box,
+#page2 #elem3 .box {
   background-color: #e5f0d6;
 }
-#page2 #elem2 .box{
+#page2 #elem2 .box {
   background-color: #f5dfcf;
 }
 #page3 {
@@ -276,7 +298,7 @@ body {
   margin-bottom: 2vh;
   padding: 5vh;
 }
-#page3 .page3-text{
+#page3 .page3-text {
   position: relative;
   display: flex;
   width: 100%;
@@ -285,24 +307,24 @@ body {
   text-align: left;
 }
 
-#page3 .page3-text h3{
+#page3 .page3-text h3 {
   font-size: 3rem;
   font-family: futura;
   line-height: 3.4vw;
   padding: 2vw;
 }
 
-#page3 .page3-text .page3-para{
+#page3 .page3-text .page3-para {
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   padding: 2vw;
-} 
+}
 
-#page3 .page3-text .page3-para p{
+#page3 .page3-text .page3-para p {
   margin: 1vw 5vw;
   color: black;
-} 
-#page3 .page3-text .page3-para span{
+}
+#page3 .page3-text .page3-para span {
   text-transform: uppercase;
   font-size: 0.8rem;
   position: relative;
@@ -312,7 +334,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-#page3 .page3-text .page3-para span::after{
+#page3 .page3-text .page3-para span::after {
   content: "";
   width: 0%;
   background-color: black;
@@ -323,7 +345,7 @@ body {
   height: 2px;
   transition: width 0.2s;
 }
-#page3 .page3-text .page3-para span:hover::after{
+#page3 .page3-text .page3-para span:hover::after {
   width: 100%;
 }
 
@@ -344,16 +366,13 @@ body {
   margin: 3vw;
 }
 
-
-
-
-#page5{
+#page5 {
   font-family: Futura;
   position: relative;
   height: 100vh;
   width: 100%;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,24 +382,24 @@ body {
   background-size: cover;
 }
 
-#page5 .elem{
+#page5 .elem {
   width: 100%;
   position: relative;
   cursor: pointer;
 }
-#page5 .elem .blur{
+#page5 .elem .blur {
   position: absolute;
   width: 30%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(to right,#f5e31be8, #F5E41B, #f5e31be8);
-  box-shadow: 10px 0px 20px 20px #F5E41B, -10px 0px 20px 100px #F5E41B;;
+  background: linear-gradient(to right, #f5e31be8, #f5e41b, #f5e31be8);
+  box-shadow: 10px 0px 20px 20px #f5e41b, -10px 0px 20px 100px #f5e41b;
   height: 100%;
   z-index: 100;
 }
 
-#page5 .elem h2{
+#page5 .elem h2 {
   font-size: 6vw;
   text-transform: uppercase;
   font-weight: 100;
@@ -389,9 +408,9 @@ body {
   line-height: 5vw;
   font-style: normal;
 }
-#page5 .elem .moving{
+#page5 .elem .moving {
   overflow: hidden;
-  background-color: #F5E41B;
+  background-color: #f5e41b;
   width: 100%;
   white-space: nowrap;
   padding: 3px 0;
@@ -400,7 +419,7 @@ body {
   transform: translate(0, -45%) scaleY(0);
   transition: all ease 0.5s;
 }
-#page5 .elem .moving .moving-in{
+#page5 .elem .moving .moving-in {
   display: inline-block;
   white-space: nowrap;
   animation-name: moving;
@@ -408,7 +427,7 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#page5 .elem .moving .moving-in h5{
+#page5 .elem .moving .moving-in h5 {
   color: #000;
   font-weight: 500;
   display: inline-block;
@@ -416,24 +435,23 @@ body {
   margin-right: 35px;
   transition-delay: 0.3s;
 }
-#page5 .elem:hover .moving{
+#page5 .elem:hover .moving {
   transform: translate(0, -45%) scaleY(1);
 }
-#page5 .elem:hover .moving h5{
+#page5 .elem:hover .moving h5 {
   opacity: 1;
 }
-#page5 .elem:hover h2{
+#page5 .elem:hover h2 {
   font-style: italic;
 }
 
 @keyframes moving {
-  from{
-      transform: translateX(0);
+  from {
+    transform: translateX(0);
   }
-  to{
-      transform: translateX(-100%);
+  to {
+    transform: translateX(-100%);
   }
-  
 }
 
 @media (max-width: 600px) {
@@ -475,47 +493,53 @@ body {
 }
 
 /* blur div and horizontal scroll */
-.bgele{
+.bgele {
   z-index: -100000000000;
   position: absolute;
   height: 500px;
   width: 500px;
   background: #d51010;
   border-radius: 10% 10% 60% 50%;
-  animation: move 20s  infinite ease-in-out;
-  background: rgb(224,77,43);
-/* background: radial-gradient(circle, rgb(237, 43, 0) 0%, rgb(248, 156, 52) 100%); */
-background: rgb(224,43,43);
-background: rgb(230,17,17);
-background: linear-gradient(48deg, rgba(230,17,17,1) 0%, rgba(255,0,77,1) 50%, rgba(252,176,69,1) 100%);border: none;
+  animation: move 20s infinite ease-in-out;
+  background: rgb(224, 77, 43);
+  /* background: radial-gradient(circle, rgb(237, 43, 0) 0%, rgb(248, 156, 52) 100%); */
+  background: rgb(224, 43, 43);
+  background: rgb(230, 17, 17);
+  background: linear-gradient(
+    48deg,
+    rgba(230, 17, 17, 1) 0%,
+    rgba(255, 0, 77, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border: none;
   box-shadow: inset 0px 0px 20px 20px #ffffff;
   filter: blur(40px);
 }
 @keyframes move {
-  0%{
-      top: -25%;
-      left: 40%;
-      border-radius: 60% 50%;
+  0% {
+    top: -25%;
+    left: 40%;
+    border-radius: 60% 50%;
   }
-  50%{
-      top: -20%;
-      left: 35%;
-      border-radius: 50% 60%;
+  50% {
+    top: -20%;
+    left: 35%;
+    border-radius: 50% 60%;
   }
-  100%{
-      top: -25%;
-      left: 40%;
+  100% {
+    top: -25%;
+    left: 40%;
 
-      border-radius: 60% 50%;
+    border-radius: 60% 50%;
   }
 }
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.horizontalScroll{
+.horizontalScroll {
   font-family: "Futura", sans-serif;
   display: flex;
   align-items: center;
@@ -523,48 +547,45 @@ background: linear-gradient(48deg, rgba(230,17,17,1) 0%, rgba(255,0,77,1) 50%, r
   overflow: hidden;
   margin: 5rem 0;
 }
-.line{
+.line {
   position: absolute;
   width: 100%;
   height: 1rem;
 
   background-color: #6c6c6c54;
-
 }
 
-.horizontalList{
+.horizontalList {
   display: flex;
   left: 100%;
   width: 200%;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  animation: infiniteScroll 15s linear infinite ;
+  animation: infiniteScroll 15s linear infinite;
 }
-.horizontalList2{
+.horizontalList2 {
   display: flex;
   left: 100%;
   width: 100%;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  animation: infiniteScroll 15s linear infinite ;
-
+  animation: infiniteScroll 15s linear infinite;
 
   animation-delay: 10s;
 }
-li{
+li {
   list-style: none;
   margin-left: 1rem;
   font-size: 75px;
   /* font-weight: 100; */
 }
-@keyframes infiniteScroll{
-  0%{
+@keyframes infiniteScroll {
+  0% {
     left: 100%;
-
   }
-  100%{
+  100% {
     left: -100%;
   }
 }

@@ -109,9 +109,9 @@ gsap.to("#nav-part1 svg", {
   scrollTrigger: {
     trigger: "#page1",
     scroller: "#main",
-    markers: false,
+    markers: true,
     start: "top 0",
-    end: "top -5%",
+    end: "top -10%",
     scrub: true,
   },
 });

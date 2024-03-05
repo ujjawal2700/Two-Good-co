@@ -120,3 +120,13 @@ locoMotiveAnimation();
 loadingAnimation();
 videoConAnimation();
 cursorAnimation();
+
+
+var elems = document.querySelectorAll(".elem");
+var page5 = document.querySelector("#page5");
+elems.forEach(function(el){
+    el.addEventListener("mouseenter", function(){
+        var bgimg = el.getAttribute("data-img");
+        page5.style.backgroundImage = `url(${bgimg})`;
+    })
+})

@@ -345,9 +345,95 @@ body {
 }
 
 
-#page4 {
-  min-height: 100vh;
+
+
+#page5{
+  font-family: Futura;
+  position: relative;
+  height: 100vh;
   width: 100%;
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+}
+
+#page5 .elem{
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#page5 .elem .blur{
+  position: absolute;
+  width: 30%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right,#f5e31be8, #F5E41B, #f5e31be8);
+  box-shadow: 10px 0px 20px 20px #F5E41B, -10px 0px 20px 100px #F5E41B;;
+  height: 100%;
+  z-index: 100;
+}
+
+#page5 .elem h2{
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: 100;
+  position: relative;
+  z-index: 100;
+  line-height: 5vw;
+  font-style: normal;
+}
+#page5 .elem .moving{
+  overflow: hidden;
+  background-color: #F5E41B;
+  width: 100%;
+  white-space: nowrap;
+  padding: 3px 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -45%) scaleY(0);
+  transition: all ease 0.5s;
+}
+#page5 .elem .moving .moving-in{
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: moving;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#page5 .elem .moving .moving-in h5{
+  color: #000;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 35px;
+  transition-delay: 0.3s;
+}
+#page5 .elem:hover .moving{
+  transform: translate(0, -45%) scaleY(1);
+}
+#page5 .elem:hover .moving h5{
+  opacity: 1;
+}
+#page5 .elem:hover h2{
+  font-style: italic;
+}
+
+@keyframes moving {
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-100%);
+  }
+  
 }
 
 @media (max-width: 600px) {
